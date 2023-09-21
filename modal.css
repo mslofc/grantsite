@@ -1,0 +1,130 @@
+
+
+/* Modal styles */
+.modal {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    max-width: 400px;
+    width: 90%;
+}
+
+/* Close button styles */
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    color: #888;
+    cursor: pointer;
+}
+
+/* Heading styles */
+h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Dropdown styles */
+#investmentPlan {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+/* Input label styles */
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+/* Input styles */
+#investmentAmount,
+#bitcoinAddress {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+/* "Copy to Clipboard" button styles */
+#copyBtn,
+#proceedBtn {
+    background-color: #0a0b0c;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+#copyBtn:hover,
+#proceedBtn:hover {
+    background-color: #5f6b78;
+}
+
+/* Countdown container styles */
+#countdown-container {
+    display: none;
+    margin-top: 20px;
+    align-items: center;
+}
+
+/* Message styles */
+#expiration-message {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+/* Countdown timer styles */
+#countdown {
+    font-size: 24px;
+    margin-right: 10px;
+    color: #333;
+}
+
+/* Loading bar styles */
+#loading-bar {
+    height: 10px;
+    background-color: #007bff;
+    border-radius: 5px;
+    margin-top: 10px;
+    width: 100%;
+}
+
+
+/* Center the button on the screen */
+#investBtn {
+    display: block;
+    margin: 0 auto;
+    padding: 15px 30px;
+    background-color: #313a43;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+/* Add hover effect */
+#investBtn:hover {
+    background-color: #0056b3;
+}

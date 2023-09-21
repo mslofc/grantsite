@@ -1,0 +1,906 @@
+/* Reset some default margin and padding */
+body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+/* Style for the "Active Investment Plans" section */
+#investmentSection {
+    background-color: #f8f8f8;
+    padding: 20px;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.5;
+}
+
+ul {
+    list-style-type: disc;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+li {
+    font-size: 16px;
+    color: #444;
+    margin-bottom: 10px;
+}
+
+#loadingBarContainer {
+    width: 100%;
+    background-color: #f0f0f0;
+    height: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+    position: relative;
+}
+
+#loadingBar {
+    width: 0;
+    height: 100%;
+    background-color: #007bff;
+    border-radius: 10px;
+    transition: width 1s ease-in-out;
+}
+
+#earningsText {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 16px;
+    color: #333;
+}
+
+
+/* Add this CSS to your styles.css file or in a <style> tag in your HTML */
+
+/* Style for the button */
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4d565f; /* Button background color */
+    color: #fff; /* Button text color */
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover effect */
+.button:hover {
+    background-color: #949da7; /* Change background color on hover */
+}
+
+/* Center the button */
+.text-center {
+    text-align: center;
+}
+
+
+/* CSS for User Details Section */
+.user-details {
+    background-color: #f5f5f5;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.user-details p {
+    margin: 0;
+    font-size: 18px;
+    color: #333;
+}
+
+#username {
+    font-weight: bold;
+    color: #566473; /* Change this color to your preference */
+}
+
+#portfolio-balance {
+    font-weight: bold;
+    color: #28A745; /* Change this color to your preference */
+}
+
+
+/* Apply styles to the body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e1dada;
+    color: #7e1d1d;
+}
+
+/* Header styles */
+header {
+    background-color: #007bff;
+    /* Blue background color */
+    color: #fff;
+    /* White text color */
+    padding: 10px 0;
+    text-align: center;
+}
+
+
+
+
+/* Style for the transaction table */
+#transaction-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+/* Style for table header */
+#transaction-table th {
+    background-color: #f2f2f2;
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+/* Style for table rows */
+#transaction-table tr {
+    border: 1px solid #ddd;
+}
+
+/* Style for alternating row backgrounds */
+#transaction-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* Style for table cells */
+#transaction-table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+/* Style for table cells in the "Type" column */
+#transaction-table td:nth-child(2) {
+    color: green; /* You can choose a color for deposits */
+}
+
+/* Style for the "Amount" column */
+#transaction-table td:nth-child(3) {
+    font-weight: bold;
+}
+
+/* Style for the "Message" column */
+#transaction-table td:nth-child(4) {
+    font-style: italic;
+    color: #666;
+}
+
+
+
+
+
+
+
+
+.plan-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.plan-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #c9c4c4;
+}
+
+.plan {
+    flex-grow: 1;
+}
+
+.plan h3 {
+    font-size: 20px;
+    color: #333;
+    margin: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Container styles */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Main heading styles */
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #333;
+    /* Dark text color */
+}
+
+/* Section heading styles */
+h2 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #007bff;
+    /* Blue text color */
+}
+
+/* Paragraph styles */
+p {
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
+
+/* List styles */
+ul {
+    list-style: none;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+/* Link styles */
+a {
+    text-decoration: none;
+    color: #007bff;
+    /* Blue link color */
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Card styles (for cards displaying investment goals) */
+.card {
+    background-color: #f7f3f3;
+    /* White card background color */
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer styles */
+footer {
+    background-color: #333;
+    /* Dark footer background color */
+    color: #fff;
+    /* White text color */
+    text-align: center;
+    padding: 10px 0;
+}
+
+/* Social media icons (customize as needed) */
+.social-icons {
+    margin-top: 10px;
+}
+
+.social-icons a {
+    font-size: 1.5rem;
+    margin: 0 10px;
+    color: #fff;
+    /* White icon color */
+}
+
+
+
+
+
+.investment-card {
+    margin-top: 20px;
+}
+
+.nft-card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 10px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f7f7f7;
+}
+
+.nft-image img {
+    max-width: 100%;
+    max-height: 150px;
+    border-radius: 8px;
+}
+
+.nft-details {
+    margin-top: 10px;
+    text-align: center;
+}
+
+h3 {
+    font-size: 18px;
+    margin: 5px 0;
+}
+
+p {
+    font-size: 14px;
+    margin: 5px 0;
+}
+
+button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+  
+  .pricing .card {
+    background-color: #f9f9fa;
+    border: none;
+    border-radius: 1rem;
+    transition: all 0.2s;
+    box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.1);
+  }
+  
+  .pricing hr {
+    margin: 1.5rem 0;
+  }
+  
+  .pricing .card-title {
+    margin: 0.5rem 0;
+    font-size: 0.9rem;
+    letter-spacing: .1rem;
+    font-weight: bold;
+  }
+  
+  .pricing .card-price {
+    font-size: 3rem;
+    margin: 0;
+  }
+  
+  .pricing .card-price .period {
+    font-size: 0.8rem;
+  }
+  
+  .pricing ul li {
+    margin-bottom: 1rem;
+  }
+  
+  .pricing .text-muted {
+    opacity: 0.7;
+  }
+  
+  .pricing .btn {
+    font-size: 80%;
+    border-radius: 5rem;
+    letter-spacing: .1rem;
+    font-weight: bold;
+    padding: 1rem;
+    opacity: 0.7;
+    transition: all 0.2s;
+  }
+  
+  /* Hover Effects on Card */
+  
+  @media (min-width: 992px) {
+    .pricing .card:hover {
+      margin-top: -.25rem;
+      margin-bottom: .25rem;
+      box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.3);
+    }
+  
+    .pricing .card:hover .btn {
+      opacity: 1;
+    }
+  }
+
+
+
+
+
+
+
+
+
+.dashboard-chart-wrapper {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+.dashboard-chart-left-content {
+    width: 755px;
+}
+
+.dashboard-chart {
+    margin-bottom: 30px;
+    padding: 25px;
+    border-radius: 15px;
+    background-color: #2a263e;
+}
+
+.dashboard-chart-top-content {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    margin-bottom: 15px;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.dashboard-chart-title-wrapper {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.dashboard-chart-title {
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    color: #fff;
+    font-size: 18px;
+    line-height: 28px;
+}
+
+.dashboard-chart-title.mr35 {
+    margin-right: 35px;
+}
+
+.dashboard-chart-list-wrap {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.dashboard-chart-list-text {
+    margin-left: 5px;
+    color: #14a655;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.dashboard-categorys {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.dashboard-categorys-text-block {
+    padding: 3px 13px;
+    border-radius: 20px;
+    -webkit-transition: all 350ms ease;
+    transition: all 350ms ease;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.dashboard-categorys-text-block:hover {
+    background-color: #3e3b4e;
+    color: #fff;
+}
+
+.dashboard-chart-image {
+    width: 100%;
+}
+
+.transaction-wrapper {
+    padding: 25px;
+    border-radius: 15px;
+    background-color: #2a263e;
+}
+
+.dashboard-chart-title-wrap {
+    margin-bottom: 20px;
+}
+
+.dashboard-chart-title-wrap.postion {
+    position: absolute;
+    left: 0%;
+    top: 0%;
+    right: auto;
+    bottom: auto;
+}
+
+.dashboard-chart-title-wrap.mb0 {
+    margin-bottom: 0px;
+}
+
+.dashboard-chart-title-wrap.history-title-wrapper {
+    position: absolute;
+    left: 25px;
+    top: 25px;
+    right: auto;
+    bottom: auto;
+    margin-bottom: 0px;
+}
+
+.dashboard-chart-title-wrap.flex {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+:root {
+	--c-gray-900: #000000;
+	--c-gray-800: #1f1f1f;
+	--c-gray-700: #2e2e2e;
+	--c-gray-600: #313131;
+	--c-gray-500: #969593;
+	--c-gray-400: #a6a6a6;
+	--c-gray-300: #bdbbb7;
+	--c-gray-200: #f1f1f1;
+	--c-gray-100: #ffffff;
+
+	--c-green-500: #45ffbc;
+	--c-olive-500: #e3ffa8;
+
+	--c-white: var(--c-gray-100);
+
+	--c-text-primary: var(--c-gray-100);
+	--c-text-secondary: var(--c-gray-200);
+	--c-text-tertiary: var(--c-gray-500);
+}
+
+
+button,
+select,
+input,
+textarea {
+	font: inherit;
+}
+
+a {
+	color: inherit;
+}
+
+.responsive-wrapper {
+	width: 90%;
+	max-width: 1600px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.app {
+	min-height: 80vh;
+	width: 95%;
+	max-width: 1600px;
+	background-color: var(--c-gray-800);
+	padding: 2vw 4vw 6vw;
+	display: flex;
+	flex-direction: column;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.navigation {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	color: var(--c-text-tertiary);
+	a {
+		display: flex;
+		align-items: center;
+		text-decoration: none;
+		transition: 0.25s ease;
+
+		* {
+			transition: 0.25s ease;
+		}
+
+		i {
+			margin-right: 0.75rem;
+			font-size: 1.25em;
+			flex-shrink: 0;
+		}
+
+		& + a {
+			margin-top: 1.25rem;
+		}
+
+		&:hover,
+		&:focus {
+			transform: translateX(4px);
+			color: var(--c-text-primary);
+		}
+	}
+}
+
+.countdown {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    display: inline-block;
+}
+
+.timer {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+
+.user-profile {
+
+	display: flex;
+	align-items: center;
+	border: 0;
+	background: transparent;
+	cursor: pointer;
+	color: var(--c-text-tertiary);
+	transition: 0.25s ease;
+    
+
+	&:hover,
+	&:focus {
+		color: var(--c-text-primary);
+		span:last-child {
+			box-shadow: 0 0 0 4px var(--c-gray-800), 0 0 0 5px var(--c-text-tertiary);
+		}
+	}
+
+    
+
+	
+	span:last-child {
+		transition: 0.25s ease;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 42px;
+		height: 42px;
+		border-radius: 50%;
+		overflow: hidden;
+		margin-left: 1.5rem;
+		flex-shrink: 0;
+	}
+}
+
+.icon-button {
+	width: 32px;
+	height: 32px;
+	border-radius: 50%;
+	border: 0;
+	background-color: transparent;
+	border: 1px solid var(--c-gray-500);
+	color: var(--c-text-primary);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	transition: 0.25s ease;
+	flex-shrink: 0;
+	&.large {
+		width: 42px;
+		height: 42px;
+		font-size: 1.25em;
+	}
+
+	i {
+		transition: 0.25s ease;
+	}
+
+	&:hover,
+	&:focus {
+		background-color: var(--c-gray-600);
+		box-shadow: 0 0 0 4px var(--c-gray-800), 0 0 0 5px var(--c-text-tertiary);
+	}
+}
+
+.tiles {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	column-gap: 1rem;
+	row-gap: 1rem;
+	margin-top: 1.25rem;
+	@media (max-width: 700px) {
+		grid-template-columns: repeat(1, 1fr);
+	}
+}
+
+.tile {
+	padding: 1rem;
+	border-radius: 8px;
+	background-color: var(--c-olive-500);
+	color: var(--c-gray-900);
+	min-height: 200px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	position: relative;
+	transition: 0.25s ease;
+
+	&:hover {
+		transform: translateY(-5px);
+	}
+
+	&:focus-within {
+		box-shadow: 0 0 0 2px var(--c-gray-800), 0 0 0 4px var(--c-olive-500);
+	}
+
+	&:nth-child(2) {
+		background-color: var(--c-green-500);
+		&:focus-within {
+			box-shadow: 0 0 0 2px var(--c-gray-800), 0 0 0 4px var(--c-green-500);
+		}
+	}
+	&:nth-child(3) {
+		background-color: var(--c-gray-300);
+		&:focus-within {
+			box-shadow: 0 0 0 2px var(--c-gray-800), 0 0 0 4px var(--c-gray-300);
+		}
+	}
+
+	a {
+		text-decoration: none;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		font-weight: 600;
+
+		.icon-button {
+			color: inherit;
+			border-color: inherit;
+			&:hover,
+			&:focus {
+				background-color: transparent;
+				i {
+					transform: none;
+				}
+			}
+		}
+
+		&:focus {
+			box-shadow: none;
+		}
+
+		&:after {
+			content: "";
+			display: block;
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+		}
+	}
+}
+
+.tile-header {
+	display: flex;
+	align-items: center;
+	i {
+		font-size: 2.5em;
+	}
+
+	h3 {
+		display: flex;
+		flex-direction: column;
+		line-height: 1.375;
+		margin-left: 0.5rem;
+		span:first-child {
+			font-weight: 600;
+		}
+
+		span:last-child {
+			font-size: 0.825em;
+			font-weight: 200;
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

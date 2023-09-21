@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="modal.css">
+    <title>Investment Modal</title>
+</head>
+<body>
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="closeBtn">&times;</span>
+            <h2>Choose an Investment Plan</h2>
+            <select id="investmentPlan">
+                <option value="plan1">Plan 1</option>
+                <option value="plan2">Plan 2</option>
+                <option value="plan3">Plan 3</option>
+            </select>
+            <p>Bitcoin Address:</p>
+            <input type="text" id="bitcoinAddress" value="35joRurU8o3tCZV4xffseJXSX5trtJjbrk" readonly>
+            <button id="copyBtn">Copy to Clipboard</button>
+            <div id="countdown-container">
+                <p id="expiration-message">Your payment will expire in:</p>
+                <div id="countdown">30:00</div>
+                <div id="loading-bar"></div>
+            </div>
+        </div>
+    </div>
+    <script src="dashboard.js"></script>
+</body>
+</html>

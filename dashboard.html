@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Beautiful Bootstrap Navbar with Menu Icons</title>
+<link rel="stylesheet" href="dashboard.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.8/clipboard.min.js"></script>
+
+<link rel="stylesheet" href="modal.css">
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="path/to/jquery-3.5.1.min.js"></script>
+
+<link rel="shortcut icon" href="apple-icon-60x60.png" type="image/svg+xml">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<style>
+body {
+	background: #eeeeee;
+	font-family: 'Varela Round', sans-serif;
+}
+.navbar {
+	color: #fff;
+	background: #0d0c0d !important;
+	padding: 5px 16px;
+	border-radius: 0;
+	border: none;
+	box-shadow: 0 0 4px rgba(0,0,0,.1);
+}
+.navbar img {
+	border-radius: 50%;
+	width: 36px;
+	height: 36px;
+	margin-right: 10px;
+}
+.navbar .navbar-brand {
+	color: #f6f5f7;
+	padding-left: 0;
+	padding-right: 50px;
+	font-size: 24px;		
+}
+.navbar .navbar-brand:hover, .navbar .navbar-brand:focus {
+	color: #fff;
+}
+.navbar .navbar-brand i {
+	font-size: 25px;
+	margin-right: 5px;
+}
+.search-box {
+	position: relative;
+}	
+.search-box input {
+	padding-right: 35px;
+	min-height: 38px;
+	border: none;
+	background: #faf7fd;
+	border-radius: 3px !important;
+}
+.search-box input:focus {		
+	background: #fff;
+	box-shadow: none;
+}
+.search-box .input-group-addon {
+	min-width: 35px;
+	border: none;
+	background: transparent;
+	position: absolute;
+	right: 0;
+	z-index: 9;
+	padding: 10px 7px;
+	height: 100%;
+}
+.search-box i {
+	color: #a0a5b1;
+	font-size: 19px;
+}
+.navbar .nav-item i {
+	font-size: 18px;
+}
+.navbar .nav-item span {
+	position: relative;
+	top: 3px;
+}
+.navbar .navbar-nav > a {
+	color: #efe5ff;
+	padding: 8px 15px;
+	font-size: 14px;		
+}
+.navbar .navbar-nav > a:hover, .navbar .navbar-nav > a:focus {
+	color: #fff;
+	text-shadow: 0 0 4px rgba(255,255,255,0.3);
+}
+.navbar .navbar-nav > a > i {
+	display: block;
+	text-align: center;
+}
+.navbar .dropdown-item i {
+	font-size: 16px;
+	min-width: 22px;
+}
+.navbar .dropdown-item .material-icons {
+	font-size: 21px;
+	line-height: 16px;
+	vertical-align: middle;
+	margin-top: -2px;
+}
+.navbar .nav-item.open > a, .navbar .nav-item.open > a:hover, .navbar .nav-item.open > a:focus {
+	color: #fff;
+	background: none !important;
+}
+.navbar .dropdown-menu {
+	border-radius: 1px;
+	border-color: #e5e5e5;
+	box-shadow: 0 2px 8px rgba(0,0,0,.05);
+}
+.navbar .dropdown-menu a {
+	color: #777 !important;
+	padding: 8px 20px;
+	line-height: normal;
+	font-size: 15px;
+}
+.navbar .dropdown-menu a:hover, .navbar .dropdown-menu a:focus {
+	color: #333 !important;
+	background: transparent !important;
+}
+.navbar .navbar-nav .active a, .navbar .navbar-nav .active a:hover, .navbar .navbar-nav .active a:focus {
+	color: #fff;
+	text-shadow: 0 0 4px rgba(255,255,255,0.2);
+	background: transparent !important;
+}
+.navbar .navbar-nav .user-action {
+	padding: 9px 15px;
+	font-size: 15px;
+}
+.navbar .navbar-toggle {
+	border-color: #fff;
+}
+.navbar .navbar-toggle .icon-bar {
+	background: #fff;
+}
+.navbar .navbar-toggle:focus, .navbar .navbar-toggle:hover {
+	background: transparent;
+}
+.navbar .navbar-nav .open .dropdown-menu {
+	background: #faf7fd;
+	border-radius: 1px;
+	border-color: #faf7fd;
+	box-shadow: 0 2px 8px rgba(0,0,0,.05);
+}
+.navbar .divider {
+	background-color: #e9ecef !important;
+}
+@media (min-width: 1200px){
+	.form-inline .input-group {
+		width: 350px;
+		margin-left: 30px;
+	}
+}
+@media (max-width: 1199px){
+	.navbar .navbar-nav > a > i {
+		display: inline-block;			
+		text-align: left;
+		min-width: 30px;
+		position: relative;
+		top: 4px;
+	}
+	.navbar .navbar-collapse {
+		border: none;
+		box-shadow: none;
+		padding: 0;
+	}
+	.navbar .navbar-form {
+		border: none;			
+		display: block;
+		margin: 10px 0;
+		padding: 0;
+	}
+	.navbar .navbar-nav {
+		margin: 8px 0;
+	}
+	.navbar .navbar-toggle {
+		margin-right: 0;
+	}
+	.input-group {
+		width: 100%;
+	}
+}
+</style>
+</head> 
+<body>
+<nav class="navbar navbar-expand-xl navbar-dark bg-dark">
+	<a href="" class="navbar-brand"><i class="fa fa-bitcoin"></i>Grant<b>DigitalWorld</b></a>  		
+	<button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+		<span class="navbar-toggler-icon"></span>
+	</button>
+	<!-- Collection of nav links, forms, and other content for toggling -->
+	<div id="navbarCollapse" class="collapse navbar-collapse justify-content-start">		
+
+		<div class="navbar-nav ml-auto">
+			<a href="dashboard.html" class="nav-item nav-link active"><i class="fa fa-home"></i><span>Home</span></a>
+			<a href="pricing.html" class="nav-item nav-link"><i class="fa fa-users"></i><span>packages</span></a>
+			<a href="#" class="nav-item nav-link"><i class="fa fa-pie-chart"></i><span>Reports</span></a>
+			<a href="contact.html" class="nav-item nav-link"><i class="fa fa-briefcase"></i><span>contact</span></a>
+            <a href="logout.php" class="dropdown-item"><i class="material-icons">&#xE8AC;</i> Logout</a>
+			<div class="nav-item dropdown">
+				
+				<div class="dropdown-menu">
+					<a href="#" class="dropdown-item"><i class="fa fa-user-o"></i> Profile</a>
+					<a href="#" class="dropdown-item"><i class="fa fa-calendar-o"></i> Calendar</a>
+					<a href="#" class="dropdown-item"><i class="fa fa-sliders"></i> Settings</a>
+					<div class="divider dropdown-divider"></div>
+					
+				</div>
+			</div>
+		</div>
+	</div>
+</nav>
+
+<div class="container">
+    <section class="user-details">
+            <!-- Add these HTML elements to your dashboard.html -->
+            <p>Welcome, <span id="username"></span>!</p>
+            <p>Your Portfolio Balance: $<span id="portfolio-balance"></span></p>
+
+    </section>
+
+   
+    
+    
+    
+    <div class="countdown">
+        <div class="timer">
+            <span id="hours">03</span>:<span id="minutes">00</span>:<span id="seconds">00</span>
+        </div>
+    </div>
+    <p></p>
+    
+
+
+
+
+    <div class="text-center">
+        <a href="invest.html" id="pickPackageBtn" class="button">Pick a Package Plan</a>
+    </div>
+    <p></p>
+    
+
+
+
+    <div id="investmentSection">
+        <h2>Active Investment Plans</h2>
+        <p>Explore our investment plans to grow your wealth:</p>
+        <p>Invest with confidence and watch your earnings grow!</p>
+    
+        <p>Here are some random details about our investment platform:</p>
+        <ul>
+            <li>We have been in business for <strong>over 5 years</strong>.</li>
+            <li>Our platform is <strong>secure and reliable</strong>.</li>
+            <li>Join thousands of satisfied investors.</li>
+        </ul>
+    
+        <div id="loadingBarContainer">
+            <div id="loadingBar"></div>
+            <p id="earningsText">Earnings: 0%</p>
+        </div>
+    </div>
+    
+    
+    
+  
+
+
+
+
+
+
+    
+
+<script src="dashboard.js"></script>
+
+    
+    
+
+    
+
+    <section class="pricing py-5">
+        <div><h3>...Upcoming Deals</h3></div>
+        <div class="container">
+          <div class="row">
+            <!-- Free Tier -->
+            <div class="col-lg-4">
+              <div class="card mb-5 mb-lg-0">
+                <div class="card-body">
+                  <h5 class="card-title text-muted text-uppercase text-center">BRONZE PLAN</h5>
+                  <h6 class="card-price text-center">£***<span class="period">Min</span></h6>
+                  <h6 class="card-price text-center">£***<span class="period">Max</span></h6>
+                  <hr>
+                  <ul class="fa-ul">
+                    <li><span class="fa-li"><i class="fas fa-check"></i></span>Duration 288HRS(12 days)</li>
+                    <li><span class="fa-li"><i class="fas fa-check"></i></span>Profit percentage 25%</li>
+                    <div class="d-grid">
+                    <a href="#" class="btn btn-primary text-uppercase">Invest Now</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            
+            <!-- Plus Tier -->
+            <div class="col-lg-4">
+              <div class="card mb-5 mb-lg-0">
+                <div class="card-body">
+                  <h5 class="card-title text-muted text-uppercase text-center">SILVER PLAN</h5>
+                  <h6 class="card-price text-center">£***<span class="period">min</span></h6>
+                  <h6 class="card-price text-center">£***<span class="period">max</span></h6>
+                  <hr>
+                  <ul class="fa-ul">
+                    <li><span class="fa-li"><i class="fas fa-check"></i></span><strong>Duration 240HRS(10 days)</strong></li>
+                    <li><span class="fa-li"><i class="fas fa-check"></i></span><strong>Profit percentage 50%</strong></li>
+                    <div class="d-grid">
+                    <a href="#" class="btn btn-primary text-uppercase">Invest Now</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            
+            <!-- Pro Tier -->
+            <div class="col-lg-4">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title text-muted text-uppercase text-center">GOLD PLAN</h5>
+                  <h6 class="card-price text-center">£***<span class="period">min</span></h6>
+                  <h6 class="card-price text-center">£***<span class="period">max</span></h6>
+                  <hr>
+                  <ul class="fa-ul">
+                    <li><span class="fa-li"><i class="fas fa-check"></i></span><strong>Duration 192HRS(8 days)</strong>
+                        <li><span class="fa-li"><i class="fas fa-check"></i></span><strong>profit percentage 150%</strong>
+                    </li>
+                  <div class="d-grid">
+                    <a href="#" class="btn btn-primary text-uppercase">Invest Now</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      
+      
+      </section>
+    
+
+      
+
+      
+
+      
+
+
+      
+        
+    
+
+    
+
+    
+    <script>
+      // Set the target time (3 hours from now)
+const targetTime = new Date();
+targetTime.setHours(targetTime.getHours() + 3);
+
+function updateCountdown() {
+    const currentTime = new Date();
+    const timeDifference = targetTime - currentTime;
+
+    if (timeDifference <= 0) {
+        document.getElementById('hours').textContent = '00';
+        document.getElementById('minutes').textContent = '00';
+        document.getElementById('seconds').textContent = '00';
+        clearInterval(countdownInterval);
+    } else {
+        const hours = Math.floor(timeDifference / (1000 * 60 * 60));
+        const minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
+
+        document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
+        document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
+        document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
+    }
+}
+
+updateCountdown(); // Initial call to update the countdown
+
+const countdownInterval = setInterval(updateCountdown, 1000); // Update every second
+
+      
+
+    // Fetch user data from your server
+    $.ajax({
+        url: 'dashboard.php', // Replace with the actual URL to fetch user data
+        type: 'GET',
+        dataType: 'json',
+        success: function(data) {
+            if (data.username && data.portfolio_balance) {
+                // Update the username and portfolio balance on the page
+                $('#username').text(data.username);
+                $('#portfolio-balance').text(data.portfolio_balance);
+            } else {
+                // Handle the case where data is not available
+                $('#username').text('N/A');
+                $('#portfolio-balance').text('N/A');
+            }
+        },
+        error: function(error) {
+            // Handle any errors here
+            console.error('Error fetching user data:', error);
+            $('#username').text('N/A');
+            $('#portfolio-balance').text('N/A');
+        }
+    });
+
+
+    // Function to fetch and update transaction data
+function updateTransactionTable() {
+    // Make an AJAX request to get transaction data
+    $.ajax({
+        url: 'get_transactions.php', // Replace with your server-side script
+        method: 'GET',
+        dataType: 'json',
+        success: function(data) {
+            // Clear the existing table rows
+            $('#transaction-table tbody').empty();
+
+            // Loop through the data and populate the table
+            data.forEach(function(transaction) {
+                var newRow = '<tr>' +
+                    '<td>' + transaction.date + '</td>' +
+                    '<td>' + transaction.type + '</td>' +
+                    '<td>' + transaction.amount + '</td>' +
+                    '<td>' + transaction.message + '</td>' +
+                    '</tr>';
+                $('#transaction-table tbody').append(newRow);
+            });
+        },
+        error: function() {
+            console.error('Error fetching transaction data');
+        }
+    });
+}
+
+// Periodically update the transaction table (e.g., every 30 seconds)
+setInterval(updateTransactionTable, 30000); // Adjust the interval as needed
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    const copyButtons = document.querySelectorAll(".copy-address-btn");
+
+    copyButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+            const address = button.getAttribute("data-address");
+            const countdownContainer = button.nextElementSibling; // Assuming the countdown container is the next element
+
+            // Notify the user that the timer has started
+            countdownContainer.innerHTML = "Timer started";
+            
+            // Start the countdown timer
+            startCountdown(countdownContainer);
+
+            // Copy the address to the clipboard
+            copyToClipboard(address);
+        });
+    });
+
+    function copyToClipboard(text) {
+        const tempInput = document.createElement("input");
+        tempInput.value = text;
+        document.body.appendChild(tempInput);
+        tempInput.select();
+        document.execCommand("copy");
+        document.body.removeChild(tempInput);
+    }
+
+    function startCountdown(container) {
+        let countdown = 30 * 60; // 30 minutes in seconds
+
+        function updateCountdown() {
+            const minutes = Math.floor(countdown / 60);
+            const seconds = countdown % 60;
+            container.textContent = `${minutes}:${seconds.toString().padStart(2, "0")}`;
+            countdown--;
+
+            if (countdown < 0) {
+                container.textContent = "Expired";
+                // You can perform actions when the timer expires here
+            }
+        }
+
+        updateCountdown();
+        const countdownInterval = setInterval(updateCountdown, 1000);
+    }
+});
+
+
+
+    </script>
+    
+</body>
+</html>

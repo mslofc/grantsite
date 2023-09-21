@@ -1,0 +1,130 @@
+body {
+    background-color: #f8f8f8;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 600px;
+    background-color: #fff;
+    margin: 100px auto;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+.name {
+    font-size: 15px;
+    color: #403f3f;
+    font-weight: bold;
+}
+
+.cross {
+    font-size: 11px;
+    color: #b0aeb7;
+}
+
+.pin {
+    font-size: 14px;
+    color: #b0aeb7;
+}
+
+.first {
+    border-radius: 8px;
+    border: 1.5px solid #78b9ff;
+    color: #000;
+    background-color: #eaf4ff;
+    padding: 5px 10px;
+}
+
+.second {
+    border-radius: 8px;
+    border: 1px solid #acacb0;
+    color: #000;
+    background-color: #fff;
+    padding: 5px 10px;
+}
+
+.head {
+    color: #137ff3;
+    font-size: 12px;
+}
+
+.dollar {
+    font-size: 18px;
+    color: #097bf7;
+}
+
+.amount {
+    color: #007bff;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+
+
+
+.back {
+    color: #aba4a4;
+    font-size: 15px;
+    line-height: 73px;
+    font-weight: 400;
+}
+
+.button {
+    width: 150px;
+    height: 50px;
+    border-radius: 8px;
+    font-size: 17px;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+}
+
+.button:hover {
+    background-color: #0056b3;
+}
+
+
+/* Custom styling for the second container */
+.second {
+    background-color: #f5f5f5; /* Background color */
+    border-radius: 10px; /* Rounded corners */
+    padding: 15px; /* Spacing inside the container */
+    margin: 10px 0; /* Margin to separate containers */
+}
+
+/* Styling for the "Enter amount" text */
+.head {
+    font-size: 16px; /* Font size */
+    color: #333; /* Text color */
+    font-weight: bold; /* Bold text */
+}
+
+/* Styling for the dollar sign */
+.dollar {
+    font-size: 18px; /* Font size */
+    color: #333; /* Text color */
+}
+
+/* Styling for the input field */
+.form-control {
+    border: none; /* Remove input border */
+    border-bottom: 2px solid #007bff; /* Bottom border with blue color */
+    background-color: transparent; /* Transparent background */
+    padding: 5px 0; /* Vertical padding for input */
+    font-size: 16px; /* Font size */
+    color: #333; /* Text color */
+    width: 100%; /* Full width of the container */
+}
+
+/* Remove default input focus styles */
+.form-control:focus {
+    outline: none; /* Remove outline */
+    border-bottom: 2px solid #007bff; /* Bottom border with blue color on focus */
+}
