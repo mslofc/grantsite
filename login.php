@@ -20,7 +20,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             // Login successful, set up a session
             $_SESSION["username"] = $user["username"];
             $_SESSION["portfolio_balance"] = $user["portfolio_balance"];
-            header("Location: dashboard.html");
+            header("Location:dashboard.html");
             exit();
         } else {
             // Incorrect password
