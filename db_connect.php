@@ -1,14 +1,26 @@
 <?php
-$servername = "localhost"; // Replace with your database server name or IP address
-$username = "msl"; // Replace with your database username
-$password = "hate"; // Replace with your database password
-$dbname = "loginsystem"; // Replace with your database name
+$host = 'localhost';
+$username = 'msl';
+$password = 'hate';
+$database = 'loginsystem';
 
-// Create a connection to the database
-$conn = new mysqli($servername, $username, $password, $dbname);
+// Create a database connection
+$connection = mysqli_connect($host, $username, $password, $database);
 
 // Check the connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
+if (!$connection) {
+    die('Error connecting to the database: ' . mysqli_connect_error());
 }
+
+echo 'Connected to the database';
+
+// Close the database connection when done
+mysqli_close($connection);
 ?>
+
+
+
+
+
+
+
