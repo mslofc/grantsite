@@ -21,6 +21,7 @@ const firebaseConfig = {
   apiKey: "AIzaSyDD-doFbKvWu0sMhI3PzWHTWiErizEz3Hc",
   authDomain: "silent-star-312702.firebaseapp.com",
   projectId: "silent-star-312702",
+  databaseURL: "https://silent-star-312702-default-rtdb.firebaseio.com",
   storageBucket: "silent-star-312702.appspot.com",
   messagingSenderId: "826384579733",
   appId: "1:826384579733:web:62a4a4b4e5b847d1a82f9c",
