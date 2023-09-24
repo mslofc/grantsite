@@ -28,7 +28,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 $_SESSION['admin_username'] = $row['username'];
 
                 // Redirect to the admin dashboard or another page
-                header("Location: admin_dashboard.html");
+                header("Location: admin_dashboard.php");
                 exit();
             } else {
                 // Password is incorrect
