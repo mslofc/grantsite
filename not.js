@@ -1,6 +1,6 @@
 const countries = ['USA', 'UK', 'Germany', 'France', 'Italy','South Africa', 'United Kingdom', 'South Africa', 'Greece', 'Cuba', 'South Africa', 'Portugal', 'Austria', 'South Africa', 'Panama', 'South Africa', 'South Africa', 'Netherlands', 'Switzerland', 'Belgium', 'Israel', 'Cyprus' ];
 const actions = ['invested', 'withdrawn', 'is trading with'];
-const amounts = ['$1000', '$500', '$2000', '$800'];
+const amounts = ['£1000', '£500', '£2000', '£800','£4500','£6477','£300','£549','£1500','£2400','£700','£560','£400','£3600'];
 
 function getRandomItem(arr) {
     return arr[Math.floor(Math.random() * arr.length)];
