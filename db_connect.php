@@ -1,26 +1,16 @@
 <?php
-$host = 'localhost';
-$username = 'msl';
-$password = 'hate';
-$database = 'loginsystem';
+$servername = "localhost"; // Replace with your database server
+$username = "msl"; // Replace with your database username
+$password = "hate"; // Replace with your database password
+$dbname = "loginsystem"; // Replace with your database name
 
-// Create a database connection
-$connection = mysqli_connect($host, $username, $password, $database);
+$conn = mysqli_connect($servername, $username, $password, $dbname);
 
-// Check the connection
-if (!$connection) {
-    die('Error connecting to the database: ' . mysqli_connect_error());
+// Check if the connection is successful
+if (!$conn) {
+    die("Connection failed: " . mysqli_connect_error());
 }
 
-echo 'Connected to the database';
+// You should not close the database connection here
 
-// Close the database connection when done
-mysqli_close($connection);
 ?>
-
-
-
-
-
-
-
