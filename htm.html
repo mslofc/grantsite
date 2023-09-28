@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Your Website</title>
+   <style>
+       /* Styles for the popup overlay */
+       .overlay {
+           display: none;
+           position: fixed;
+           top: 0;
+           right: -400px; /* Start outside of the viewport */
+           width: 400px; /* Adjust the width as needed */
+           height: 100%;
+           background-color: rgba(0, 0, 0, 0.7);
+           z-index: 1;
+           transition: right 0.5s; /* Add a transition for smooth sliding */
+       }
+       
+       /* Styles for the popup content */
+       .popup {
+           position: absolute;
+           top: 0;
+           left: 0;
+           width: 100%;
+           height: 100%;
+           background-color: white;
+           padding: 20px;
+           z-index: 2;
+       }
+
+       /* Additional styles for the sliding animation */
+       .slide-in {
+           right: 0; /* Slide in from the right */
+       }
+
+       .slide-out {
+           right: -400px; /* Slide out to the right */
+       }
+   </style>
+</head>
+<body>
+   <!-- Popup overlay -->
+   <div class="overlay" id="popupOverlay">
+       <!-- Popup content -->
+       <div class="popup">
+           <!-- Dummy deposit and withdrawal details -->
+           <h2>Recent Activity</h2>
+           <p>John Doe deposited $1,000.</p>
+           <p>Jane Smith withdrew $500.</p>
+           <p>Michael Johnson deposited $2,500.</p>
+           
+           <!-- Close button -->
+           <button id="closePopup">Close</button>
+       </div>
+   </div>
+   
+   <script>
+       // JavaScript to automatically trigger the popup animation
+       const popupOverlay = document.getElementById('popupOverlay');
+       
+       // Automatically slide in the popup when the page loads
+       popupOverlay.classList.remove('slide-out');
+       popupOverlay.classList.add('slide-in');
+       popupOverlay.style.display = 'block';
+       
+       // Close the popup after a certain duration (e.g., 5 seconds)
+       setTimeout(() => {
+           popupOverlay.classList.remove('slide-in');
+           popupOverlay.classList.add('slide-out');
+           setTimeout(() => {
+               popupOverlay.style.display = 'none';
+           }, 500); // Wait for the sliding animation to complete before hiding
+       }, 5000); // Adjust the duration as needed (5 seconds in this example)
+   </script>
+</body>
+</html>

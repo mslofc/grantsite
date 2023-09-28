@@ -1,0 +1,30 @@
+
+.notification-container {
+    position: fixed;
+    top: 100px;
+    right: -300px; /* Start the notification off-screen */
+    width: 300px;
+    background-color: #2a506a;
+    color: #fff;
+    padding: 10px;
+    transition: right 0.5s ease-in-out;
+}
+
+.notification {
+    padding: 10px;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.country {
+    font-weight: bold;
+}
+
+.action {
+    font-style: italic;
+}
+
+.amount {
+    font-weight: bold;
+    color: chartreuse;
+}
