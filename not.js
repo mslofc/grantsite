@@ -1,4 +1,4 @@
-const countries = ['USA', 'UK', 'Germany', 'France', 'Italy'];
+const countries = ['USA', 'UK', 'Germany', 'France', 'Italy','South Africa', 'United Kingdom', 'South Africa', 'Greece', 'Cuba', 'South Africa', 'Portugal', 'Austria', 'South Africa', 'Panama', 'South Africa', 'South Africa', 'Netherlands', 'Switzerland', 'Belgium', 'Israel', 'Cyprus' ];
 const actions = ['invested', 'withdrawn', 'is trading with'];
 const amounts = ['$1000', '$500', '$2000', '$800'];
 
@@ -35,3 +35,7 @@ generateNotification();
 
 // Generate new notifications every 10 seconds
 setInterval(generateNotification, 10000);
+
+
+
+
