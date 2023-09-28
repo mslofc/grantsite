@@ -157,3 +157,16 @@ ul {
 }
 
 
+
+  /* Style the video container */
+  .video-container {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  /* Style the video player */
+  video {
+    width: 100%;
+    height: auto;
+  }
+
